@@ -1,0 +1,32 @@
+<div class="container">
+  
+    <div class="row">
+      <div class="col-md-3">
+             <input type="text" [(ngModel)]="produit.label" class="form-control" name="textproduit" id=""
+            placeholder="Produit">
+           </div>
+          
+  
+          <div class="col-md-3">
+            <input type="text" class="form-control" [(ngModel)]="produit.quantiter" name="textproduit" id=""
+                    placeholder="Quantiter">
+          </div>
+          
+          <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+        
+      </div>
+ 
+  <div class="row">
+    <div class="col-md-6">
+      <app-bar id="bar" [databar]="produits"></app-bar>
+    </div>
+    <div class="col-md-6">
+      <app-pie id="pie" [dataPie]="produits"></app-pie>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <line  [dataLine]="produits"></line>
+    </div>
+  </div>
+</div>
